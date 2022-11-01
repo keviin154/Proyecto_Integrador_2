@@ -1,12 +1,12 @@
 Intengrantes del grupo:
 
-Nombre: Exequiel Kevin Toledo
+Nombre: Exequiel Kevin Toledo 
 DNI: 42261038
 
 
-Nombre:
+Nombre: 
 DNI:
 
 
-Nombre:
+Nombre: 
 DNI:
