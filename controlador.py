@@ -85,3 +85,49 @@ def EliminarAlbumes():
     con.EliminarAlbumes(cod_album)
     con.conexion.close()
     input("Presione ENTER para continuar")
+    
+    
+def BuscarAlbum():
+    nombre = "%" + (input("ingrese el nombre del album: ")) + "%",
+
+    con = modelo.Conectar()
+
+    nuevoAlbum = con.BuscarAlbum(nombre)
+    print("Los resultados son: ")
+    for album in nuevoAlbum:
+        print("\n| COD. ÁLBUM   |          NOMBRE DEL ALBUM              |")
+        print("\t" + str(album[1]),"\t" + str(album[2]))
+
+    input("Presione ENTER para continuar")
+
+
+def BuscarTema():
+    titulo = "%" + (input("ingrese el nombre del tema: ")) + "%",
+
+    con = modelo.Conectar()
+
+    nuevoAlbum = con.BuscarTema(titulo)
+    print("Los resultados son: ")
+    for Tema in nuevoAlbum:
+        print("\n| NOMBRE DEL TEMA   |          NOMBRE DEL COMPOSITOR            |")
+        print(str(Tema[1]),"\t""\t" + str(Tema[3]))
+    
+
+    input("Presione ENTER para continuar")
+
+
+
+
+def BuscarInterprete():
+    nombre = "%" + (input("ingrese el nombre del interprete: ")) + "%",
+
+    con = modelo.Conectar()
+
+    nuevoAlbum = con.BuscarInterprete(nombre)
+    print("Los resultados son: ")
+    for Interprete in nuevoAlbum:
+        print("\n| NOMBRE   |          APELLIDO              |")
+        print(str(Interprete[1]),"\t""\t" + str(Interprete[2]))
+    
+
+    input("Presione ENTER para continuar")
