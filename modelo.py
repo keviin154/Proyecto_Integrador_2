@@ -183,6 +183,52 @@ class Conectar():
             except mysql.connector.Error as descripcionError:
                 print("¡No se conectó!",descripcionError)
 
+    
+    
+    def BuscarAlbum(self,album):
+        if self.conexion.is_connected():
+            try:
+                cursor = self.conexion.cursor()
+                data = (album)
+                sentenciaSQL = " SELECT * FROM album WHERE nombre LIKE %s "
+                cursor.execute(sentenciaSQL,data)
+                resultados = cursor.fetchall()
+                self.conexion.close()
+                return resultados
+
+            except mysql.connector.Error as descripcionError:
+                print("¡No se conectó!",descripcionError)
+
+
+    def BuscarTema(self,Tema):
+        if self.conexion.is_connected():
+            try:
+                cursor = self.conexion.cursor()
+                data = (Tema)
+                sentenciaSQL = " SELECT * FROM tema WHERE titulo LIKE %s "
+                cursor.execute(sentenciaSQL,data)
+                resultados = cursor.fetchall()
+                self.conexion.close()
+                return resultados
+
+            except mysql.connector.Error as descripcionError:
+                print("¡No se conectó!",descripcionError)
+
+
+    def BuscarInterprete(self,interprete):
+        if self.conexion.is_connected():
+            try:
+                cursor = self.conexion.cursor()
+                data = (interprete)
+                sentenciaSQL = " SELECT * FROM interprete WHERE nombre LIKE %s "
+                cursor.execute(sentenciaSQL,data)
+                resultados = cursor.fetchall()
+                self.conexion.close()
+                return resultados
+
+            except mysql.connector.Error as descripcionError:
+                print("¡No se conectó!",descripcionError)
+                    
 #------------------------------------------------------------------------------------------------------
 class Interprete():     
 
