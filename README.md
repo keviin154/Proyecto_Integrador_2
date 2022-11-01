@@ -4,8 +4,8 @@ Nombre: Exequiel Kevin Toledo
 DNI: 42261038
 
 
-Nombre: 
-DNI:
+Nombre: Jorge Matias Vallejos Vaca
+DNI:37958601
 
 
 Nombre: 
