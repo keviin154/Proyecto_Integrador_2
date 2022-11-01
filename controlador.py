@@ -33,7 +33,8 @@ def InsertarInterprete():
     nuevoInterprete = modelo.Interprete(id_interprete,nombre,apellido,nacionalidad,foto)
     con.InsertarInterprete(nuevoInterprete)
     input("Presione ENTER para continuar")
-    
+
+
 def InsertarAlbum():
     cod_album = int(input("\nIngrese el código del nuevo Álbum: "))
     nombre = input("Ingrese el nombre del álbum: ")
