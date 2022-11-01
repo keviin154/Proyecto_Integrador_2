@@ -73,4 +73,15 @@ def InsertarAlbum():
     con.InsertarAlbum(nuevoAlbum)
     input("Presione ENTER para continuar")
 
+   
 
+def EliminarAlbumes():
+    con = modelo.Conectar()
+    listado = con.ListarPorGenero()
+    print("\n| COD. ÁLBUM   |          NOMBRE              |       INTERPRETE              |   GENERO   |     DISCOGRAFICA   |   PRECIO   |   CANTIDAD   |  FORMATO   |")
+    for album in listado:
+        print(' ',album[0],"\t",album[1],"\t\t",album[2]+' '+album[3],"\t\t  ",album[4],"\t",album[5]," $",album[6]," Cant:",album[7]," ",album[8])
+    cod_album = input("Ingrese el codigo del album a eliminar: ")
+    con.EliminarAlbumes(cod_album)
+    con.conexion.close()
+    input("Presione ENTER para continuar")
