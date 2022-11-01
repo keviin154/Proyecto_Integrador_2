@@ -29,7 +29,9 @@ while True:
             None
         elif opcion_2 == 0:
             Break
-    elif opcion == 2:
+        else:
+            print("¡Opción incorrecta!")
+    if opcion == 2:
         controlador.ListarAlbumesPorArtistas()
     elif opcion == 3:
         controlador.ListarAlbumesPorGenero()
@@ -47,8 +49,10 @@ while True:
             controlador.BuscarInterprete()
         elif opcion_3 == 0:
             Break
-    elif opcion == 5:
-        None
+        else:
+            print("¡Opción incorrecta!")
+    if opcion == 5:
+        controlador.InsertarInterprete()
     elif opcion == 0:
         break
     else:
