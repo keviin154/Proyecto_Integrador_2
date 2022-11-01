@@ -15,7 +15,25 @@ def ListarAlbumesPorGenero():
     for album in listado:
         print(' ',album[0],"\t",album[1],"\t\t",album[2]+' '+album[3],"\t\t  ",album[4],"\t",album[5]," $",album[6]," Cant:",album[7]," ",album[8])
     input("Presione ENTER para continuar")
+    
+def InsertarInterprete():
+    
+    con = modelo.Conectar()
+    
+    id_interprete = input("Ingrese el id del interprete: ")
 
+    nombre = input("Ingrese el nombre del interprete: ")
+
+    apellido = input("\nIngrese el apellido del interprete: ")
+
+    nacionalidad = input("\nIngrese la nacionalidad del interprete: ")
+
+    foto = input("Ingrese foto del interprete")
+
+    nuevoInterprete = modelo.Interprete(id_interprete,nombre,apellido,nacionalidad,foto)
+    con.InsertarInterprete(nuevoInterprete)
+    input("Presione ENTER para continuar")
+    
 def InsertarAlbum():
     cod_album = int(input("\nIngrese el código del nuevo Álbum: "))
     nombre = input("Ingrese el nombre del álbum: ")
